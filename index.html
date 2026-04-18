@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,23 +23,23 @@
         section.active { display: block; animation: fadeIn 0.5s ease; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-        /* Home Content Styling */
         .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
         .hero h1 { font-size: clamp(50px, 12vw, 100px); letter-spacing: 10px; }
         
-        .btn { padding: 15px 40px; border-radius: 5px; text-decoration: none; font-weight: bold; cursor: pointer; border: 1px solid var(--gold); text-transform: uppercase; display: inline-block; margin: 10px; }
+        /* Professional Buttons */
+        .btn { padding: 15px 40px; border-radius: 5px; text-decoration: none; font-weight: bold; cursor: pointer; border: 1px solid var(--gold); text-transform: uppercase; display: inline-block; margin: 10px; font-size: 14px; }
         .btn-gold { background: var(--gold); color: #000; }
         .btn-outline { background: transparent; color: var(--gold); }
+        .btn:hover { box-shadow: 0 0 25px rgba(212,175,55,0.4); transform: translateY(-3px); }
 
-        /* Why Choose Us Grid */
-        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1100px; margin: 50px auto; }
-        .why-card { background: var(--dark); padding: 40px 20px; border-radius: 10px; border-bottom: 2px solid var(--gold); }
-        .why-card i { font-size: 35px; color: var(--gold); margin-bottom: 15px; }
+        /* Grids */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1100px; margin: 50px auto; }
+        .card { background: var(--dark); padding: 0; border: 1px solid #222; border-radius: 12px; overflow: hidden; }
+        .card:hover { border-color: var(--gold); }
+        .card-img { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid #222; }
+        .card-body { padding: 25px; }
 
-        /* Grids for Work & Pricing */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1100px; margin: 40px auto; }
-        .card { background: var(--dark); padding: 30px; border: 1px solid #222; border-radius: 10px; }
-        .price { font-size: 40px; color: var(--gold); margin: 15px 0; font-weight: bold; }
+        .price { font-size: 45px; color: var(--gold); margin: 15px 0; font-weight: bold; }
 
         /* Contact Stack */
         .contact-stack { display: flex; flex-direction: column; gap: 15px; max-width: 400px; margin: 40px auto; }
@@ -68,56 +68,47 @@
                 <a onclick="showPage('contact-page')" class="btn btn-outline">Contact Us</a>
             </div>
         </div>
-
         <h2 class="gold-text" style="font-size: 40px; margin-top: 60px;">Why Veltro?</h2>
-        <div class="why-grid">
-            <div class="why-card">
-                <i class="fas fa-gem"></i>
+        <div class="grid">
+            <div class="card" style="padding: 40px 20px; border-bottom: 3px solid var(--gold);">
+                <i class="fas fa-gem" style="font-size:35px; color:var(--gold); margin-bottom:15px;"></i>
                 <h3 class="gold-text">Elite Aesthetics</h3>
-                <p style="color: var(--text-grey); font-size: 14px; margin-top: 10px;">Unique luxury designs that separate you from the noise.</p>
+                <p style="color: var(--text-grey); font-size: 14px; margin-top: 10px;">High-resolution luxury designs.</p>
             </div>
-            <div class="why-card">
-                <i class="fas fa-robot"></i>
-                <h3 class="gold-text">Agentic AI</h3>
-                <p style="color: var(--text-grey); font-size: 14px; margin-top: 10px;">Smart bots that handle your clients while you sleep.</p>
-            </div>
-            <div class="why-card">
-                <i class="fas fa-bolt"></i>
-                <h3 class="gold-text">Global Speed</h3>
-                <p style="color: var(--text-grey); font-size: 14px; margin-top: 10px;">Lightning fast performance for a global audience.</p>
+            <div class="card" style="padding: 40px 20px; border-bottom: 3px solid var(--gold);">
+                <i class="fas fa-robot" style="font-size:35px; color:var(--gold); margin-bottom:15px;"></i>
+                <h3 class="gold-text">Agentic Power</h3>
+                <p style="color: var(--text-grey); font-size: 14px; margin-top: 10px;">Automated AI-driven experiences.</p>
             </div>
         </div>
-
-        <h2 class="gold-text" style="font-size: 30px; margin-top: 50px;">Direct Connect</h2>
-        <div class="contact-stack">
-            <a href="tel:+919766653504" class="contact-btn"><i class="fas fa-phone"></i> Call Agency</a>
-            <a href="https://wa.me/919766653504" class="contact-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-        </div>
-        <footer>© 2026 VELTRO AGENCY | DESIGNED FOR THE ELITE</footer>
+        <footer>© 2026 VELTRO AGENCY</footer>
     </section>
 
     <section id="work">
-        <h2 class="gold-text" style="font-size: 40px;">Featured Work</h2>
+        <h2 class="gold-text" style="font-size: 45px;">Featured Work</h2>
         <div class="grid">
-            <div class="card" style="padding:0; overflow:hidden;">
-                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=500" style="width:100%; height:200px; object-fit:cover;">
-                <div style="padding:20px;">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600" class="card-img">
+                <div class="card-body">
                     <h3 class="gold-text">The Brews House</h3>
-                    <a href="https://worldc579-ui.github.io/The-Brews-House/" target="_blank" style="color:var(--gold); font-size:12px; text-decoration:none;">VIEW LIVE SITE</a>
+                    <p style="color:#666; font-size:13px; margin-bottom:15px;">Luxury Cafe Experience</p>
+                    <a href="https://worldc579-ui.github.io/The-Brews-House/" target="_blank" class="btn btn-gold" style="padding:10px 20px; font-size:12px; width:100%;">Live View</a>
                 </div>
             </div>
-            <div class="card" style="padding:0; overflow:hidden;">
-                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=500" style="width:100%; height:200px; object-fit:cover;">
-                <div style="padding:20px;">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=600" class="card-img">
+                <div class="card-body">
                     <h3 class="gold-text">Ember & Oak</h3>
-                    <a href="https://worldc579-ui.github.io/Ember-Oak/" target="_blank" style="color:var(--gold); font-size:12px; text-decoration:none;">VIEW LIVE SITE</a>
+                    <p style="color:#666; font-size:13px; margin-bottom:15px;">Fine Dining Masterpiece</p>
+                    <a href="https://worldc579-ui.github.io/Ember-Oak/" target="_blank" class="btn btn-gold" style="padding:10px 20px; font-size:12px; width:100%;">Live View</a>
                 </div>
             </div>
-            <div class="card" style="padding:0; overflow:hidden;">
-                <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=500" style="width:100%; height:200px; object-fit:cover;">
-                <div style="padding:20px;">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600" class="card-img">
+                <div class="card-body">
                     <h3 class="gold-text">Verdict Restaurant</h3>
-                    <a href="https://worldc579-ui.github.io/Verdict-Restaurant/" target="_blank" style="color:var(--gold); font-size:12px; text-decoration:none;">VIEW LIVE SITE</a>
+                    <p style="color:#666; font-size:13px; margin-bottom:15px;">Modern Gastronomy UI</p>
+                    <a href="https://worldc579-ui.github.io/Verdict-Restaurant/" target="_blank" class="btn btn-gold" style="padding:10px 20px; font-size:12px; width:100%;">Live View</a>
                 </div>
             </div>
         </div>
@@ -125,32 +116,41 @@
     </section>
 
     <section id="pricing">
-        <h2 class="gold-text" style="font-size: 40px;">The Investment</h2>
+        <h2 class="gold-text" style="font-size: 45px;">The Investment</h2>
         <div class="grid">
-            <div class="card">
+            <div class="card" style="padding:40px;">
                 <h3 class="gold-text">Basic</h3>
                 <div class="price">$75</div>
-                <p style="color:#666; margin-bottom:20px;">Single Page | Standard UI</p>
-                <a onclick="showPage('contact-page')" class="btn btn-outline" style="font-size:10px;">Select</a>
+                <ul style="list-style:none; color:#666; margin-bottom:20px; text-align:left; line-height:2;">
+                    <li><i class="fas fa-check" style="color:var(--gold)"></i> Single Page Design</li>
+                    <li><i class="fas fa-check" style="color:var(--gold)"></i> Mobile Responsive</li>
+                </ul>
+                <a onclick="showPage('contact-page')" class="btn btn-outline" style="width:100%;">Select</a>
             </div>
-            <div class="card" style="border-color:var(--gold);">
+            <div class="card" style="padding:40px; border-color:var(--gold);">
                 <h3 class="gold-text">Standard</h3>
                 <div class="price">$150</div>
-                <p style="color:#666; margin-bottom:20px;">5 Pages | Free Domain</p>
-                <a onclick="showPage('contact-page')" class="btn btn-gold" style="font-size:10px;">Select</a>
+                <ul style="list-style:none; color:#666; margin-bottom:20px; text-align:left; line-height:2;">
+                    <li><i class="fas fa-check" style="color:var(--gold)"></i> 5 Page Website</li>
+                    <li><i class="fas fa-check" style="color:var(--gold)"></i> Free .com Domain</li>
+                </ul>
+                <a onclick="showPage('contact-page')" class="btn btn-gold" style="width:100%;">Select</a>
             </div>
-            <div class="card">
+            <div class="card" style="padding:40px;">
                 <h3 class="gold-text">Premium</h3>
                 <div class="price">$300</div>
-                <p style="color:#666; margin-bottom:20px;">AI Agent | Priority Support</p>
-                <a onclick="showPage('contact-page')" class="btn btn-outline" style="font-size:10px;">Select</a>
+                <ul style="list-style:none; color:#666; margin-bottom:20px; text-align:left; line-height:2;">
+                    <li><i class="fas fa-check" style="color:var(--gold)"></i> Agentic AI Features</li>
+                    <li><i class="fas fa-check" style="color:var(--gold)"></i> Priority Maintenance</li>
+                </ul>
+                <a onclick="showPage('contact-page')" class="btn btn-outline" style="width:100%;">Select</a>
             </div>
         </div>
         <a onclick="showPage('home')" class="btn btn-outline">Back Home</a>
     </section>
 
     <section id="contact-page">
-        <h2 class="gold-text" style="font-size: 40px;">Get In Touch</h2>
+        <h2 class="gold-text" style="font-size: 45px;">Get In Touch</h2>
         <div class="contact-stack">
             <a href="tel:+919766653504" class="contact-btn"><i class="fas fa-phone"></i> Call Veltro</a>
             <a href="https://wa.me/919766653504" class="contact-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
@@ -161,24 +161,13 @@
     </section>
 
     <script>
-        function toggleMenu() {
-            document.getElementById('sideNav').classList.toggle('active');
-        }
+        function toggleMenu() { document.getElementById('sideNav').classList.toggle('active'); }
         function showPage(id) {
             document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
             document.getElementById(id).classList.add('active');
             document.getElementById('sideNav').classList.remove('active');
             window.scrollTo(0,0);
-            
-            // Allow scroll only on home page
-            if(id === 'home') {
-                document.body.style.overflowY = "auto";
-            } else {
-                document.body.style.overflowY = "auto"; // Keeping it auto for long grids
-            }
         }
     </script>
 </body>
 </html>
-
-
